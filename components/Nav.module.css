@@ -1,0 +1,12 @@
+.container {
+  padding: 0 .25rem;
+  max-width: 90%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navLink {
+     padding :0 1.25rem;
+     color: #FBFBFB;
+     font-size: 1rem;
+}
