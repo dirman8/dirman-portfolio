@@ -5,6 +5,7 @@ import Nav from '../components/Nav'
 import About from '../components/About'
 import Projects from '../components/Projects'
 import Blog from '../components/Blog'
+import Form from '../components/Form'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <About />
         <Projects />
         <Blog />
+        <Form />
         <main className={styles.main}></main>
 
         <footer className={styles.footer}>
