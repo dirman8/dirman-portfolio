@@ -3,7 +3,7 @@ import styles from "./Blog.module.css";
 
 const Blog = () => {
   return (
-    <div className="pt-24 pb-32 bg-slate-100">
+    <div className="pt-24 pb-32 bg-white">
       <div className="pb-4 text-center text-4xl font-medium text-gray-700 ">BLOG</div>
       <div className="m-auto mb-8 bg-gray-700 h-1 w-20  "></div>
 
