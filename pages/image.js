@@ -1,5 +1,5 @@
 import Image from "next/image";
-import iphone from "../public/sky.jpg";
+import iphone from "../public/iphone.jpg";
 import styles from "../styles/Fill.module.css";
 
 const Fill = () => (
