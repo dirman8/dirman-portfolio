@@ -1,14 +1,11 @@
 .container {
-    max-width: 1280px;
-    margin: auto;
+    margin-bottom: 2rem;
     display: flex;
-    flex-wrap: wrap;
 }
 
-.image{
+.image {
     position: relative;
-    background: none;
-    width: 33%;
+    width: 50%;
     height: auto;
 }
 
@@ -49,7 +46,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  
+  color: #FF8DC7;
   text-align: center;
   opacity: 0;
   transition: .5s ease;
@@ -67,19 +64,4 @@
 
 .image:hover .overlay > p {
     transform: translateY(-40px);
-}
-
-@media screen and (min-width: 960px) {
-    .image {
-        width: 390px;
-    }
-    .image img::before {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .image {
-        max-width: 300px;
-    }
 }
