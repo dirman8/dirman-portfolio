@@ -14,9 +14,8 @@ const About = () => {
 				{/* Atur margin/padding agar saat medium content tidak terlalu kecil */}
 				<div className="w-6/12 m-auto md: w-5/6">
 					<h1 className="text-5xl mb-10 leading-124">
-						Hello,I'm Sudirman.
-						<br />
-						I'm Front-End Developer.
+						Hello,I am Sudirman.
+						<br />I am Front-End Developer.
 					</h1>
 					<h3 className="text-3xl">
 						I build Website and Web Application with one of best and most popular Javascript Framework, React.
@@ -28,7 +27,7 @@ const About = () => {
 				</div>
 				<div className="w-6/12 md: w-5/6">
 					<div className="mx-auto">
-						<Image src="/dirman.png" alt="Dirman's Foto" width={widthPercentage} height={heightPercentage} style={imageStyle} />
+						<Image src="/dirman.png" alt="Dirman Foto" width={widthPercentage} height={heightPercentage} style={imageStyle} />
 					</div>
 				</div>
 			</div>
