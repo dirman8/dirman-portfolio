@@ -8,6 +8,10 @@ module.exports = {
 				customBlack: "#181824",
 				customTeal: "#003049",
 			},
+			fontFamily: {
+				futuramdbt: ["futura-medium-bt"],
+				futuraltbt: ["futura-light-bt"],
+			},
 		},
 	},
 	plugins: [],

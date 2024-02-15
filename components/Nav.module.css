@@ -1,12 +1,46 @@
 .container {
-  padding: 0 .25rem;
-  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  background-color: #003049;
+  top: 3rem;
+  padding:1.5rem;
   margin-top: auto;
   margin-bottom: auto;
+  margin-right: 1.25rem;
 }
 
 .navLink {
-     padding :0 0 0 2.5rem;
+  color: #FBFBFB;
+  font-size: 1.25rem;
+  margin-left: 2rem;
+}
+
+@media (max-width:640px) {
+.container {
+  position: fixed;
+  right: 0;
+  transform: translateX(100%); /* Initially off-screen */
+  flex-direction: column;
+  top: 3rem;
+  right: -1.35rem;
+  padding:1.5rem;
+  max-width: 80%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 1.25rem;
+  transition: right 0.9s ease;
+}
+
+.container.active {
+   transform: translateX(0); /* Moves the menu into view when active */
+}
+
+  .navLink {
      color: #FBFBFB;
-     font-size: 1.25rem;
+     font-size: 1rem;
+     margin-left: 1rem;
+     margin-right: 1rem;
+     text-align: center;
+}
+
 }

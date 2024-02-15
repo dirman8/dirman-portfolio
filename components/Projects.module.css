@@ -1,6 +1,7 @@
 .container {
     margin-bottom: 2rem;
     display: flex;
+    font-family: futura-light-bt;
 }
 
 .image {
@@ -20,6 +21,7 @@
 
 .image:hover::before {
     background: white;
+    /* opacity: 0.5; */
  }
 
 .overlay {
@@ -32,13 +34,14 @@
 
 .overlay > h2 {
   font-size: 1.25rem;
+  color: black;
   line-height: 1.75rem;
   font-weight: 700;
   text-align: center;
 }
 
 .overlay > h4 {
-    color: #FF8DC7;
+    color: #003049;
     text-align: center;
 }
 
@@ -46,7 +49,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  color: #FF8DC7;
+  color: #003049;
   text-align: center;
   opacity: 0;
   transition: .5s ease;

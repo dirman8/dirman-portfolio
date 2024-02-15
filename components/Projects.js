@@ -3,60 +3,71 @@ import styles from "./Projects.module.css";
 
 const Projects = () => {
 	return (
-		<div className="max-w-7xl mx-auto ">
-			<div className="pb-4 text-center text-4xl font-medium text-white ">PROJECTS</div>
-			<div className="m-auto mb-8 h-1 w-20  "></div>
-
-			<div className={styles.container}>
-				<div className={styles.image}>
+		<div id="projects" className="max-w-6xl mx-auto mt-10 pt-10">
+			<div className="font-futuramdbt mb-4 pb-4 text-center text-3xl sm:text-4xl font-medium text-white ">PROJECTS</div>
+			<div className="font-futuraltbt mb-8 items-center flex flex-col lg:flex-row ">
+				<div className="w-3/4 h-auto lg:w-1/2">
 					<div className={styles.overlay}>
-						<h2>Quote Generator</h2>
-						<h4>Javascript</h4>
+						<h2>Dev Buddy Apps</h2>
 					</div>
-					<img src="/web-project.jpg" alt="web project" />
+					<img src="/dev-buddy.png" alt="web project" />
 					<div className={styles.bottomOverlay}>
-						<a className="px-2 py-1 border-4 border-pink-600 rounded-md border-opacity-80" href="https://dirman8.github.io/Quote-Generator/">
-							LEARN MORE
+						<a className="px-3 py-2 border-4 border-indigo-800 rounded-md border-opacity-80" href="https://devbuddy.vercel.app/">
+							LEARN MORE ...
 						</a>
 					</div>
 				</div>
-				<div className="w-1/2">
-					<h1 className="text-2xl ">First Project</h1>
-					<p className="text-xl">Lorem ipsum dolor sit amet consectetur. Porttitor aliquam quis diam vestibulum malesuada enim egestas. Sed arcu lacinia volutpat viverra in. Integer etravida feugiat et. Ut dignissim mauris at at.</p>
+				<div className="w-3/4 ml-5 my-auto mt-3 lg:mt-0 lg:w-1/2">
+					<h1 className="text-3xl sm:text-4xl text-center mb-6">Dev Buddy</h1>
+					<p className="text-xl mb-4">This App build to help Developer save their useful Snippets, so they can search it whenever they need it.</p>
+					<p className="text-xl mb-4">Build with Next JS and Algolia as search platform make this app fast and powerful search machine.</p>
+					<p className="text-xl">Masonry grid layout library make the display like card floating.</p>
 				</div>
 			</div>
 
-			<div className={styles.container}>
-				<div className="w-1/2">
-					<h1 className="text-2xl ">First Project</h1>
-					<p className="text-xl">Lorem ipsum dolor sit amet consectetur. Porttitor aliquam quis diam vestibulum malesuada enim egestas. Sed arcu lacinia volutpat viverra in. Integer etravida feugiat et. Ut dignissim mauris at at.</p>
+			<div className="flex flex-col font-futuraltbt mb-8 items-center lg:flex-row">
+				<div className="hidden w-3/4 ml-5 my-auto lg:block lg:w-1/2">
+					<h1 className="text-3xl sm:text-4xl text-center mb-6">Amazon Clone</h1>
+					<p className="text-xl mb-4">NextJS Amazon Clone featuring Stripe integration for seamless payments.</p>
+					<p className="text-xl mb-4">Utilizes Firestore for product database and Next Auth for secure authentication.</p>
+					<p className="text-xl mb-4">A minimalist yet comprehensive e-commerce solution, exemplifying essential online store functionalities.</p>
 				</div>
-				<div className={styles.image}>
+				<div className="w-3/4 h-auto lg:w-1/2">
 					<div className={styles.overlay}>
-						<h2>Navigation App</h2>
-						<h4>React & Map Lib</h4>
+						<h2>Amazon Clone</h2>
 					</div>
-					<img src="/navigation.jpg" alt="iphone" />
+					<img src="/amazon-clone.png" alt="iphone" />
 					<div className={styles.bottomOverlay}>
-						<a className="px-2 py-1 border-4 border-pink-600 rounded-md border-opacity-80" href="https://dirman8.github.io/Quote-Generator/">
-							LEARN MORE
+						<a className="px-3 py-2 border-4 border-indigo-800 rounded-md border-opacity-80" href="https://amazone-clone-brown.vercel.app/">
+							LEARN MORE ...
 						</a>
 					</div>
+				</div>
+				<div className="block w-3/4 ml-5 mt-3 lg:hidden lg:w-1/2 my-auto">
+					<h1 className="text-3xl sm:text-4xl text-center mb-6">Amazon Clone</h1>
+					<p className="text-xl mb-4">NextJS Amazon Clone featuring Stripe integration for seamless payments.</p>
+					<p className="text-xl mb-4">Utilizes Firestore for product database and Next Auth for secure authentication.</p>
+					<p className="text-xl mb-4">A minimalist yet comprehensive e-commerce solution, exemplifying essential online store functionalities.</p>
 				</div>
 			</div>
 
-			<div className={styles.container}>
-				<div className={styles.image}>
+			<div className="font-futuraltbt mb-8 items-center flex flex-col lg:flex-row">
+				<div className="w-3/4 h-auto lg:w-1/2">
 					<div className={styles.overlay}>
-						<h2>Mobile App</h2>
-						<h4>React Native</h4>
+						<h2>Medium Clone</h2>
 					</div>
-					<img src="/phone.jpg" alt="phone" />
+					<img src="/medium-clone.png" alt="phone" />
 					<div className={styles.bottomOverlay}>
-						<a className="px-2 py-1 border-4 border-pink-600 rounded-md border-opacity-80" href="https://dirman8.github.io/Quote-Generator/">
-							LEARN MORE
+						<a className="px-3 py-2 border-4 border-indigo-800 rounded-md border-opacity-80" href="https://mediumclone-livid.vercel.app/">
+							LEARN MORE ...
 						</a>
 					</div>
+				</div>
+				<div className="w-3/4 ml-5 my-auto mt-3 lg:mt-0 lg:w-1/2">
+					<h1 className="text-4xl text-center mb-6">Medium Clone</h1>
+					<p className="text-xl mb-4">Built using NextJS, this app ensures top-notch code quality with Typescript integration.</p>
+					<p className="text-xl mb-4">Styled with Tailwind for readability and fast loading.</p>
+					<p className="text-xl">Includes Sanity CMS for easy article submission and editing.</p>
 				</div>
 			</div>
 		</div>

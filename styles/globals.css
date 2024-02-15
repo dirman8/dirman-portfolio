@@ -32,3 +32,13 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "futura-medium-bt";
+  src: url("../public/fonts/futura-medium-bt.ttf");
+}
+
+@font-face {
+  font-family: "futura-light-bt";
+  src: url("../public/fonts/futura-light-bt.ttf");
+}
