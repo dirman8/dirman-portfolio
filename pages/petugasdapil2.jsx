@@ -5,6 +5,7 @@ const PetugasDapil2 = () => {
     const usernames = username2.map(item => item.username);
 
     const [hasil, setHasil] = useState({});
+    const [isLoading, setIsLoading] = useState(true); // State to indicate loading status
 
     const getTotalInput = async (username) => {
         try {
@@ -27,21 +28,26 @@ const PetugasDapil2 = () => {
                 results[username] = length;
             }
             setHasil(results);
+            setIsLoading(false); // Set loading status to false after fetching data
         };
 
         fetchData();
     }, [usernames]);
 
     return (
-        <div className="flex flex-col items-center justify-center text-gray-800 mt-6" >
+        <div className="flex flex-col items-center justify-center text-gray-800 mt-6">
             <h1 className="text-center text-4xl mb-4">PROGRESS INPUT MASING-MASING USER</h1>
-            <div className="flex flex-col items-center text-2xl">
-                {Object.entries(hasil).map(([username, length], index) => (
-                    <div key={index}>
-                        <h1>{username}: {length}</h1>
-                    </div>
-                ))}
-            </div>
+            {isLoading ? ( // Show loading indicator while data is being fetched
+                <p className='text-2xl mt-5'>Loading...</p>
+            ) : (
+                <div className="flex flex-col items-center text-2xl">
+                    {Object.entries(hasil).map(([username, length], index) => (
+                        <div key={index}>
+                            <h1>{username}: {length}</h1>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };
