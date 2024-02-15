@@ -12,7 +12,7 @@ const NewTabulasi = () => {
       let total
       try {
         // const res = await fetch("https://data-collector-server-073fb68b758e.herokuapp.com/api/get?field1=DEMOKRAT0&field2=0&field3=DEMOKRAT1");
-        const res = await fetch("http://localhost:3001/api/get?field1=DEMOKRAT0&field2=0&field3=DEMOKRAT1");
+        const res = await fetch("https://data-collector-server-073fb68b758e.herokuapp.com/api/get?field1=DEMOKRAT0&field2=0&field3=DEMOKRAT1");
         const results = await res.json();
         console.log("fetch result:", results);
         results.forEach(result => {

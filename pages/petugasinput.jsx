@@ -8,7 +8,7 @@ const PetugasInput = () => {
 
     const getTotalInput = async (username) => {
         try {
-            const url = `http://localhost:3001/api/username?field1=username&field2=${username}&field3=username`;
+            const url = `https://data-collector-server-073fb68b758e.herokuapp.com/api/username?field1=username&field2=${username}&field3=username`;
             const response = await fetch(url);
             const responseData = await response.json();
             const length = responseData.length;

@@ -4,7 +4,7 @@ const Card = ({ caleg, dapil, tingkat }) => {
 	useEffect(() => {
 		const fetchPerolehanSuara = async () => {
 			try {
-				const response = await fetch("http://localhost:3001/api/get?field1=DEMOKRAT0&field2=0&field3=DEMOKRAT1", {
+				const response = await fetch("https://data-collector-server-073fb68b758e.herokuapp.com/api/get?field1=DEMOKRAT0&field2=0&field3=DEMOKRAT1", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json",

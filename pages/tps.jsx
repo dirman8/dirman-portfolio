@@ -74,7 +74,7 @@ const Tps = () => {
 
   useEffect(() => {
     setTpsPerKelurahan(getNomerTps())
-    const url = `http://localhost:3001/api/getmany?field1=kecamatan&field2=${kecamatanPilihan.value}&field3=kelurahan&field4=${kecamatanPilihan.value}&field5=nomertps&exclude=_id`;
+    const url = `https://data-collector-server-073fb68b758e.herokuapp.com/api/getmany?field1=kecamatan&field2=${kecamatanPilihan.value}&field3=kelurahan&field4=${kecamatanPilihan.value}&field5=nomertps&exclude=_id`;
     fetch(url) // Relative URL to your API route
 			.then((response) => response.json())
 			.then((responseData) => {
