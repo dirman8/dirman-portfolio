@@ -291,7 +291,7 @@ export const username4 = [
 	{ username: "D4_WON_20", password: "593793", dapil: 4 },
 ];
 
-export const usernamed5 = [
+export const username5 = [
 	{ username: "D5_ASE_01", password: "524762", dapil: 5 },
 	{ username: "D5_ASE_02", password: "249041", dapil: 5 },
 	{ username: "D5_ASE_03", password: "978184", dapil: 5 },
