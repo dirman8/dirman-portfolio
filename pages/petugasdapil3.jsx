@@ -1,8 +1,8 @@
-import { username } from '../constant/username';
+import { username3 } from '../constant/username';
 import { useEffect, useState } from 'react';
 
-const PetugasInput = () => {
-    const usernames = username.map(item => item.username);
+const PetugasDapil3 = () => {
+    const usernames = username3.map(item => item.username);
 
     const [hasil, setHasil] = useState({});
 
@@ -46,4 +46,4 @@ const PetugasInput = () => {
     );
 };
 
-export default PetugasInput;
+export default PetugasDapil3;

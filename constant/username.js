@@ -3,7 +3,7 @@
 // 	{ username: "D1_BUB_02", password: "559452", dapil: 1 },
 // 	{ username: "D1_BUB_03", password: "507767", dapil: 1 },
 // ];
-export const username = [
+export const username1 = [
 	{ username: "D1_BUB_01", password: "819895", dapil: 1 },
 	{ username: "D1_BUB_02", password: "559452", dapil: 1 },
 	{ username: "D1_BUB_03", password: "507767", dapil: 1 },
@@ -74,6 +74,9 @@ export const username = [
 	{ username: "D1_TEG_10", password: "585278", dapil: 1 },
 	{ username: "D1_TEG_11", password: "461244", dapil: 1 },
 	{ username: "D1_TEG_12", password: "828250", dapil: 1 },
+];
+
+export const username2 = [
 	{ username: "D2_KEN_01", password: "376135", dapil: 2 },
 	{ username: "D2_KEN_02", password: "752055", dapil: 2 },
 	{ username: "D2_KEN_03", password: "163233", dapil: 2 },
@@ -149,6 +152,9 @@ export const username = [
 	{ username: "D2_TAM_24", password: "106017", dapil: 2 },
 	{ username: "D2_TAM_25", password: "438499", dapil: 2 },
 	{ username: "D2_TAM_26", password: "045521", dapil: 2 },
+];
+
+export const username3 = [
 	{ username: "D3_BUL_01", password: "271345", dapil: 3 },
 	{ username: "D3_BUL_02", password: "205158", dapil: 3 },
 	{ username: "D3_BUL_03", password: "618709", dapil: 3 },
@@ -214,6 +220,9 @@ export const username = [
 	{ username: "D3_WON_07", password: "486875", dapil: 3 },
 	{ username: "D3_WON_08", password: "854258", dapil: 3 },
 	{ username: "D3_WON_09", password: "529416", dapil: 3 },
+];
+
+export const username4 = [
 	{ username: "D4_GYG_01", password: "552227", dapil: 4 },
 	{ username: "D4_GYG_02", password: "472558", dapil: 4 },
 	{ username: "D4_GYG_03", password: "473479", dapil: 4 },
@@ -280,6 +289,9 @@ export const username = [
 	{ username: "D4_WON_18", password: "284575", dapil: 4 },
 	{ username: "D4_WON_19", password: "380368", dapil: 4 },
 	{ username: "D4_WON_20", password: "593793", dapil: 4 },
+];
+
+export const usernamed5 = [
 	{ username: "D5_ASE_01", password: "524762", dapil: 5 },
 	{ username: "D5_ASE_02", password: "249041", dapil: 5 },
 	{ username: "D5_ASE_03", password: "978184", dapil: 5 },
