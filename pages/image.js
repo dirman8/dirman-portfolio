@@ -1,10 +1,10 @@
 import Image from "next/image";
-import iphone from "../public/iphone.jpg";
+// import iphone from "../public/iphone.jpg";
 import styles from "../styles/Fill.module.css";
 
 const Fill = () => (
 	<div className={styles.container}>
-		<Image
+		{/* <Image
 			alt="sample-foto"
 			src={iphone}
 			contain
@@ -12,7 +12,7 @@ const Fill = () => (
 			style={{
 				objectFit: "none",
 			}}
-		/>
+		/> */}
 	</div>
 );
 
