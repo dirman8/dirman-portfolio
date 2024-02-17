@@ -4,7 +4,7 @@ import * as XLSX from 'xlsx';
 import Select from 'react-select';
 import { kelurahan as allKelurahan, kecamatan as allKecamatan } from '../constant/dataKelurahan';
 
-const TarikDataNdcc = () => {
+const TarikProvinsi = () => {
     const [kecamatanPilihan, setKecamatanPilihan] = useState({value:"Asemrowo", label:"Asemrowo"});
     const [kelurahanPilihan, setKelurahanPilihan] = useState({value:"Asemrowo", label:"Asemrowo"});
     const [hasil, setHasil] = useState();
@@ -26,7 +26,7 @@ const TarikDataNdcc = () => {
 // MENGAMBIL OBJECT TPS SESUAI KECAMATAN dan KELURAHAN
     const fetchHasil = async (kec, kel) => {
         let total
-        const url = `https://data-collector-server-073fb68b758e.herokuapp.com/api/getndcc?field1=kecamatan&field2=${kec}&field3=kelurahan&field4=${kel}&exclude=_id`
+        const url = `https://data-collector-server-073fb68b758e.herokuapp.com/api/getndccprovinsi?field1=kecamatan&field2=${kec}&field3=kelurahan&field4=${kel}&exclude=_id`
         console.log("url :", url)
         try {
             setFetching(true);
@@ -141,4 +141,4 @@ const TarikDataNdcc = () => {
     )
 }
 
-export default TarikDataNdcc;
+export default TarikProvinsi;
