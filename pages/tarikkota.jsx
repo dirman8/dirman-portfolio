@@ -133,7 +133,7 @@ const TarikKota = () => {
               />
           </div>
         </div>
-        {(fetching || hasil.length === 0) ? <p>Loading...</p> : <div className="flex flex-row px-10 mt-20 justify-evenly ">
+        {(fetching || hasil?.length === 0) ? <p>Loading...</p> : <div className="flex flex-row px-10 mt-20 justify-evenly ">
             <button className="px-4 py-2 font-bold text-white text-gray-700 bg-blue-500 rounded hover:bg-blue-300" onClick={() => generateExcel(hasilGabungan)} disabled={fetching}>Generate Excel</button>
         </div>}
         
