@@ -20,7 +20,7 @@ const Card = ({ caleg, dapil, tingkat }) => {
 			}
 		};
 
-		fetchData();
+		// fetchData();
 	}, []);
 
 	return (
@@ -32,7 +32,7 @@ const Card = ({ caleg, dapil, tingkat }) => {
 					</h1>
 					<p>Suara PKS (Partai) :</p>
 					{caleg.map((nama, index) => {
-						fetchPerolehanSuara(index);
+						// fetchPerolehanSuara(index);
 						return (
 							<p key={index}>
 								{index + 1}. {nama}

@@ -31,7 +31,7 @@ const PetugasDapil5 = () => {
             setIsLoading(false); // Set loading status to false after fetching data
         };
 
-        fetchData();
+        // fetchData();
     }, [usernames]);
 
     return (

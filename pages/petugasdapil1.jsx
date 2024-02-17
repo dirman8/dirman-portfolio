@@ -31,14 +31,14 @@ const PetugasDapil1 = () => {
             setIsLoading(false); // Set loading status to false after fetching data
         };
 
-        fetchData();
+        // fetchData();
     }, [usernames]);
 
     return (
-        <div className="flex flex-col items-center justify-center text-gray-800 mt-6">
-            <h1 className="text-center text-4xl mb-4">PROGRESS INPUT MASING-MASING USER</h1>
+        <div className="flex flex-col items-center justify-center mt-6 text-gray-800">
+            <h1 className="mb-4 text-4xl text-center">PROGRESS INPUT MASING-MASING USER</h1>
             {isLoading ? ( // Show loading indicator while data is being fetched
-                <p className='text-2xl mt-5'>Loading...</p>
+                <p className='mt-5 text-2xl'>Loading...</p>
             ) : (
                 <div className="flex flex-col items-center text-2xl">
                     {Object.entries(hasil).map(([username, length], index) => (
