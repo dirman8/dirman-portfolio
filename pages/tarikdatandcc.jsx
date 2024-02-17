@@ -26,7 +26,7 @@ const TarikDataNdcc = () => {
 // MENGAMBIL OBJECT TPS SESUAI KECAMATAN dan KELURAHAN
     const fetchHasil = async (kec, kel) => {
         let total
-        const url = `http://localhost:3001/api/getndcc?field1=kecamatan&field2=${kec}&field3=kelurahan&field4=${kel}&exclude=_id`
+        const url = `https://data-collector-server-073fb68b758e.herokuapp.com/api/getndcc?field1=kecamatan&field2=${kec}&field3=kelurahan&field4=${kel}&exclude=_id`
         console.log("url :", url)
         try {
             setFetching(true);
