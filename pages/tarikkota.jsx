@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
-import CreateData from "../lib/createData";
 import * as XLSX from 'xlsx';
 import Select from 'react-select';
+import CreateData from "../lib/createData";
 import { kelurahan as allKelurahan, kecamatan as allKecamatan } from '../constant/dataKelurahan';
 
 const TarikKota = () => {
@@ -27,7 +27,6 @@ const TarikKota = () => {
     const fetchHasil = async (kec, kel) => {
         let total
         const url = `https://data-collector-server-073fb68b758e.herokuapp.com/api/getndcckota?field1=kecamatan&field2=${kec}&field3=kelurahan&field4=${kel}&exclude=_id`
-        console.log("url :", url)
         try {
             setFetching(true);
             // const res = await fetch("https://data-collector-server-073fb68b758e.herokuapp.com/api/get?field1=DEMOKRAT0&field2=0&field3=DEMOKRAT1");
@@ -41,7 +40,6 @@ const TarikKota = () => {
             setFetching(false);
         }
     };
-    console.log("hasil :", hasil)
 
     useEffect(() => {
         fetchHasil(kecamatanPilihan.value, kelurahanPilihan.value);
@@ -78,8 +76,7 @@ const TarikKota = () => {
 
 // MEMBUAT EXCEL Per KELURAHAN
     const generateExcel = (hasilGabungan) => {
-        const dataForExcelCreate = CreateData(hasilGabungan);
-        console.log("dataForExcelCreate :", dataForExcelCreate)
+        const dataForExcelCreate =  CreateData(hasilGabungan);
 
           var aoa = dataForExcelCreate;
 
