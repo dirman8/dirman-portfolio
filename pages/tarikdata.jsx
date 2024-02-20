@@ -10,7 +10,7 @@ const TarikData = () => {
           let total
           try {
             // const res = await fetch("https://data-collector-server-073fb68b758e.herokuapp.com/api/get?field1=DEMOKRAT0&field2=0&field3=DEMOKRAT1");
-            const res = await fetch("http://localhost:3001/api/getkota?field1=dapil&field2=1");
+            const res = await fetch("http://localhost:3001/api/getpusat?field1=dapil&field2=5");
             const results = await res.json();
             console.log("Result:", results)
             setHasil(results)
@@ -41,8 +41,8 @@ const TarikData = () => {
                 return(
                 <div key={index}>
                     {hasil?.map((item, index) => (
-                        // <p key={index} className="text-xl text-red-500">{item.dapil},{item.kecamatan},{item.kelurahan},{item.nomertps},{partai},{sumValuesByPattern(partai, item)}</p>
-                        <p key={index} className="text-xl text-red-500">{item.dapil},{item.kecamatan},{item.kelurahan},{item.nomertps},{item.sstidaksah}</p>
+                        <p key={index} className="text-xl text-red-500">{item.dapil},{item.kecamatan},{item.kelurahan},{item.nomertps},{partai},{sumValuesByPattern(partai, item)}</p>
+                        // <p key={index} className="text-xl text-red-500">{item.dapil},{item.kecamatan},{item.kelurahan},{item.nomertps},{item.sstidaksah}</p>
                     ))}
                     {/* <p className="text-xl text-green-500">Total for {partai}: {sum}     {Math.floor(sum/totalSum)*100}%</p> */}
                 </div>

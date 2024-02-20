@@ -4,12 +4,13 @@ import * as XLSX from 'xlsx';
 import Select from 'react-select';
 import { kelurahan as allKelurahan, kecamatan as allKecamatan } from '../constant/dataKelurahan';
 
-const TarikKota = () => {
+const TpsInput = () => {
     const [kecamatanPilihan, setKecamatanPilihan] = useState({value:"Asemrowo", label:"Asemrowo"});
     const [kelurahanPilihan, setKelurahanPilihan] = useState({value:"Asemrowo", label:"Asemrowo"});
     const [hasil, setHasil] = useState();
-    const [hasilGabungan, setHasilGabungan] = useState();
-     const [fetching, setFetching] = useState(false);
+    const [noTps, setNoTps] = useState();
+    const [fetching, setFetching] = useState(false);
+    console.log("noTps :", noTps)
 
     const kecamatanOptions = allKecamatan.map((kec) => ({
         value: kec,
@@ -26,7 +27,7 @@ const TarikKota = () => {
 // MENGAMBIL OBJECT TPS SESUAI KECAMATAN dan KELURAHAN
     const fetchHasil = async (kec, kel) => {
         let total
-        const url = `https://data-collector-server-073fb68b758e.herokuapp.com/api/getndcckota?field1=kecamatan&field2=${kec}&field3=kelurahan&field4=${kel}&exclude=_id`
+        const url = `http://localhost:3001/api/tpsinput?field1=kecamatan&field2=${kec}&field3=kelurahan&field4=${kel}&exclude=_id`
         console.log("url :", url)
         try {
             setFetching(true);
@@ -47,48 +48,19 @@ const TarikKota = () => {
         fetchHasil(kecamatanPilihan.value, kelurahanPilihan.value);
     }, [kecamatanPilihan, kelurahanPilihan]);
 
-// MENGGABUNGKAN HASIL MASING-MASING CALON DENGAN TOTAL MASING-MASING PARTAI
-    const sumValuesByPattern = (partai, item) => {
-        const filteredKeys = Object.keys(item).filter((key) => key.startsWith(partai));
-        const sum = filteredKeys.reduce((acc, key) => acc + item[key], 0);
-        return sum;
-    };
     useEffect(() => {
-        // Menggabungkan"hasil" dengan "total masing-masing partai"
-        const calculateTotals = async () => {
+          const getNomerTps = async () => {
             if (hasil) {
-                const totals = hasil.map((item) => {
-                    const totalSuaraPartai = parties.map((partai) => {
-                        const getTotal = sumValuesByPattern(partai, item);
-                        return { [`total${partai}`]: getTotal };
-                    });
-
-                    const spreadTotalSuaraPartai = Object.assign({}, ...totalSuaraPartai);
-                    const hasilGabunganTotal = {
-                        ...item,
-                        ...spreadTotalSuaraPartai,
-                    }
-                    return hasilGabunganTotal
+                const totalTps = hasil.map((item) => {
+                    const nomerTps = item.nomertps
+                    return "return"
                 });
-                setHasilGabungan(totals);
+                setNoTps(totalTps);
             }
         };
-        calculateTotals();
-    },[hasil])
-
-// MEMBUAT EXCEL Per KELURAHAN
-    const generateExcel = (hasilGabungan) => {
-        const dataForExcelCreate = CreateData(hasilGabungan);
-        console.log("dataForExcelCreate :", dataForExcelCreate)
-
-          var aoa = dataForExcelCreate;
-
-         var ws = XLSX.utils.aoa_to_sheet(aoa);
-        /* create workbook and export */
-        var wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
-        XLSX.writeFile(wb, "SheetJSExportAOA.xlsx");
-    }
+        getNomerTps();
+    }, [hasil])
+    
 
     const customStyles = {
       option: (defaultStyles, state) => ({
@@ -132,12 +104,13 @@ const TarikKota = () => {
               />
           </div>
         </div>
+
         {(fetching || hasil?.length === 0) ? <p>Loading...</p> : <div className="flex flex-row px-10 mt-20 justify-evenly ">
-            <button className="px-4 py-2 font-bold text-white text-gray-700 bg-blue-500 rounded hover:bg-blue-300" onClick={() => generateExcel(hasilGabungan)} disabled={fetching}>Generate Excel</button>
+            <p>HASIL</p>
         </div>}
         
     </div>
     )
 }
 
-export default TarikKota;
+export default TpsInput;
